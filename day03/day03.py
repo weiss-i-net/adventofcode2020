@@ -20,8 +20,8 @@ def main():
     tree_product = 1
     for x_slope, y_slope in [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]:
         tree_count = 0
-        for y in range(0, max_y, y_slope):
-            if tree_map[(x_slope * y // y_slope) % max_x][y] == '#':
+        for t in range(-(-max_y // y_slope)):
+            if tree_map[(x_slope * t) % max_x][y_slope * t] == '#':
                 tree_count += 1
         tree_product *= tree_count
 
